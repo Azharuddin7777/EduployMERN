@@ -1,0 +1,58 @@
+.parent-box {
+  border: 1px solid ;
+}
+.second {
+  border: 1px solid black;
+  padding: 0px 30px ;
+}
+.heading-box {
+  background-color: blue;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.heading-div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
+.second-div
+{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.second-div-ele
+{
+    height: 100px;
+    margin: 5px;
+    border: 1px solid red;
+    width: 200px;
+    text-align: center;
+}
+.third
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 200px;
+    align-items: center;
+}
+
+.second-task
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.second-task-div
+{
+    border: 1px solid red;
+    width: 200px;
+    padding-left: 30px;
+}
