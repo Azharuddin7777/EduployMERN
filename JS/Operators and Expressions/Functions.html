@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Write a function which can return the sum of two numbers.
+      //   function add(a, b) {
+      //     return a + b;
+      //   }
+      //   var sum = add(45, 67);
+      //   console.log("sum",sum);
+      //Expected output: 112
+
+      //2.Write a function which can return the greatest of the three numbers passed in arguments
+
+      //     function compare(a,b,c)
+      //     {
+      //       if(a > b && a > c)
+      //       {
+      //           return a;
+      //       }
+      //       else if (b>c)
+      //       {
+      //           return b;
+      //       }
+      //       else
+      //       {
+      //           return c;
+      //       }
+      //     }
+      //    var greatest = compare(45,67,23);
+      //    console.log(greatest);
+
+      //3.Write a function which can print the given arguments in ascending order
+      //   function sortNums(x,y,z)
+      //   {
+      //     var a = x;
+      //     var b = y;
+      //     var c = z;
+      //       if(a>b)
+      //       {
+      //         var temp = a;
+      //         a = b;
+      //         b = temp;
+      //       }
+      //       if(b>c)
+      //       {
+      //        var temp = b;
+      //        b = c;
+      //        c = temp;
+      //       }
+      //       if(a>c)
+      //       {
+      //         var temp = a;
+      //         a = c;
+      //         c = temp;
+      //       }
+      //       console.log(a,b,c);
+      //   }
+      //   var ascending = sortNums(45,7,68);
+      //  console.log(ascending,"aaaaa");
+
+      //4.Write a function which can return the factorial of a number.
+      //   function fact(a) {
+      //     var j = a;
+      //     for (i = 1; i < a; i++) {
+      //       j = j * i;
+      //     }
+      //     return j;
+      //   }
+      //   var factorial = fact(4);
+      //   console.log(factorial);
+
+      // 5.Write a function which can to return the reverse of a given number.
+      // function rev(a) {
+      //   let rev = 0;
+      //   let lastDigit;
+
+      //   while (a != 0) {
+      //     lastDigit = a % 10;
+      //     rev = rev * 10 + lastDigit;
+      //     a = Math.floor(a / 10);
+      //   }
+      //   return rev;
+      // }
+      // var reverse = rev(4321);
+      // console.log(reverse);
+
+     // 6.Write a function which can check a given number is prime number or not
+      // function checkPrimeNumber(n)
+      // {
+      //   if(n%2 == 0)
+      // }
+
+    //  7.Write a function which can check a given number is palindrome or not
+     //   8.Write a function to return the number of digits in the given number
+//      function countDigit(n)
+// {
+//     let count = 0;
+//     while (n != 0) 
+//     {
+//         n = Math.floor(n / 10);
+//         console.log(n);
+//         count++;
+//     }
+//     return count;
+// }
+//   let x = countDigit(45353535);
+//   console.log(x);
+
+
+//9.Write a function to return the number of digits in the given number
+
+
+// function printEvenNumbers(n)
+// {
+//   for(i= 1; i<= n ; i++){
+//     if(i%2==0)
+//     {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// var x = printEvenNumbers(20);
+// console.log(x);
+
+
+//10.Write a function which can add two numbers
+// function addTwoNumber(a,b)
+// {
+//   return a+b;
+// }
+// var x = addTwoNumber(8,5);
+// console.log(x);
+
+//11.Write a function which can display the greatest of the three numbers passed in arguments.
+// function checkGreatestNumber(a,b,c)
+// {
+//    if(a>b && a>c)
+//    {
+//      return a;
+//    }
+//    else if(b>c)
+//    {
+//     return b;
+//    }
+//    else
+//    {
+//     return c;
+//    }
+// }
+// var x = checkGreatestNumber(101,88,400);
+// console.log(`${x} is greatest`);
+
+//12.Write a function which can display the given arguments in ascending order
+// function asecndingOrder(arr)
+// {
+//   arr.sort(function(a,b) {return a-b})
+//   return arr;
+// }
+
+// var x = asecndingOrder([22,44,2,3,66,88,45,11]);
+// console.log(x);
+
+//13.Write a function which can display the factorial of a number
+
+// function factorial(num)
+// {
+//    var sum = num;
+//   for(i=num-1; i>= 1; i--)
+//   {
+//     console.log(i);
+//     sum = sum*i;
+//   }
+//   return sum;
+// }
+// var x = factorial(6);
+// console.log("eeee",x);
+
+
+// //Write a function which can to display the reverse of a given number
+
+// function reverseNumber(number){
+  
+//   // one process
+  
+//   // x = number.toString()
+//   // y = x.split("").reverse().join('');
+//   // return y;
+  
+//   //2nd process
+//   let rev = 0;
+//   var firstDigit = 0
+  
+//   while(number>0)
+//   {
+//     firstDigit = number%10;
+//     rev = rev * 10 + firstDigit;
+//     number = Math.floor(number/10);
+//   }
+//   return rev;
+// }
+
+// var x = reverseNumber(252627381);
+// console.log(x);
+
+// // 15.Write a function which can check a given number is palindrome or not
+
+// function checkPalindrome(string) {
+
+// const len = string.length;
+// for (let i = 0; i < len / 2; i++) {
+//     if (string[i] !== string[len - 1 - i]) {
+//         return 'It is not a palindrome';
+//     }
+// }
+// return 'It is a palindrome';
+// }
+
+// var x = checkPalindrome("madam")
+// console.log(x);
+
+//16.Write a function which can check a given number is prime number or not
+
+// function checkPrimeNumber(num)
+// {
+//   if(num < 2) return false;
+//         for (var i = 2; i <= num/2; i++) {
+//             if(num%i==0)
+//                 return false;
+//         }
+//         return true;
+// }
+
+// var x = checkPrimeNumber(11);
+// console.log(x);
+
+// 17.Write a function which can check a given number is armstrong number or not
+
+// function checkArmstrong(number)
+// {
+// const numberOfDigits = number.length;
+// let sum = 0;
+// let temp = number;
+// while(temp > 0)
+// {
+//   let remainder = temp % 10;
+
+//     sum += remainder ** 3;
+
+//     // removing last digit from the number
+//     temp = parseInt(temp / 10); // convert float into intege
+// }
+// console.log(sum);
+// if (sum == number) {
+//     let str = `${number} is an Armstrong number`;
+//     return str;
+// }
+// else {
+//     let str = `${number} is not an Armstrong number.`;
+//      return str;
+// }
+// }
+
+// var x = checkArmstrong(153);
+// console.log(x);
+
+    </script>
+  </body>
+</html>
