@@ -85,15 +85,89 @@
     //     console.log(smallest)
     //   }
 
-    //   11.For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array. Expected output: 132
-      var arr = [23,34,54,10,4,7];
-      var sum  = 0;
-      for (var i = 0; i <= arr.length-1; i++) {
-        sum += arr[i];
-        console.log(sum);
-      }
-         console.log(sum);
+    // //   11.For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array. Expected output: 132
+    //   var arr = [23,34,54,10,4,7];
+    //   var sum  = 0;
+    //   for (var i = 0; i <= arr.length-1; i++) {
+    //     sum += arr[i];
+    //   }
+    //      console.log(sum);
 
+    // // 12.For the Given array: [23,34,54,10,4,7] Average of all the numbers in an Array. Expected output: 22
+    //   var arr = [23,34,54,10,4,7];
+    //   var avg  = 0;
+    //   var sum = 0;
+    //   for (var i = 0; i <= arr.length-1; i++) 
+    //   {
+    //     sum += arr[i];
+    //   }
+    //   console.log(sum/arr.length);
+
+    // // 13.For the Given array: [23,34,54,10,4,7] print values that are greater than the given number. Given number: 20, Expected output: 23,34,54
+    //        var arr = [23,34,54,10,4,7];
+    //         var number = 10;
+    //         for (var i = 0; i <= arr.length-1; i++) 
+    //         {
+    //            if (number <= arr[i])
+    //            {
+    //             console.log(arr[i]);
+    //            }
+    //         }
+
+    // //For the Given array: [23,34,54,10,4,7] print all the even numbers in an Array. Expected output: 34,54,10,4
+    //    var arr = [23,34,54,10,4,7];
+    //    var tempArr = [];
+    //    for (i = 0; i<= arr.length-1; i++)
+    //    {
+    //       //  console.log(arr[i])
+    //        if(arr[i]%2 === 0)
+    //        {
+    //         tempArr.push(arr[i]);
+    //        }
+           
+    //    }
+    //    console.log(tempArr);
+
+      //  //For the Given array: [23,34,54,10,4,7] print all the odd numbers in an Array. Expected output: 23,7
+      //  var arr = [23,34,54,10,4,7];
+      //  var tempArr = [];
+      //  for (i = 0; i<= arr.length-1; i++)
+      //  {
+      //      if(arr[i]%2 === 1)
+      //      {
+      //       tempArr.push(arr[i]);
+      //      }
+           
+      //  }
+      //  console.log(tempArr);
+
+      // // 16.For the Given array: [23,-34,-54,10,-4,7] print all the positive numbers in an array. Expected output: 23,10,7
+
+      // var arr = [23,-34,-54,10,-4,7];
+      // var tempArr = [];
+      // for( var i=0; i<= arr.length-1;i++)
+      // {
+      //   if(arr[i]>=0)
+      //   {
+      //     tempArr.push(arr[i]);
+      //   }
+      // }
+      // console.log(tempArr)
+
+      // 17.For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not. Given number: 34, Expected output: true Given number: 26, Expected output: false
+      var arr = [23,34,54,10,4,7];
+      var number = +prompt("enter a number");
+      for(var i=0; i<= arr.length-1;i++)
+      {
+         if (arr[i] === number)
+         {
+          console.log("true");
+         }
+         else
+         {
+          console.log("false");
+         }
+      }
     </script>
   </body>
 </html>
