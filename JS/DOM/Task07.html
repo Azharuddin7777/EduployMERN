@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="target"> </div>
+
+        <script>
+                                     var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+                   var a = document.createElement("ul");
+                   for (var i=0; i<= students.length-1; i++)
+                   {
+                     var b = document.createElement("li");
+                     b.innerText = students[i].firstname;
+                     var c = students[i].subjects;
+                     console.log("cccc",c)
+                     var d = document.createElement("ol");
+                     for(var j = 0; j<= c.length-1;j++ )
+                     {
+                        var e = document.createElement("li");
+                        e.innerText = c[j];
+                        d.appendChild(e);
+
+                     }
+                     b.appendChild(d);
+                     a.appendChild(b);
+                   }
+
+                var target = document.getElementById("target");
+                target.appendChild(a);
+        </script>
+    </body>
+</html>

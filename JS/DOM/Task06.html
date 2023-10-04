@@ -1,36 +1,12 @@
 <html>
     <head>
-           
+
     </head>
     <body>
-      <style>
-        table{
-  border: solid 1px black;
-}
-
-table td{
-  border: solid 1px black;
-}
-      </style>
         <div id="target"> </div>
+
         <script>
-            // var x = document.createElement("h1")
-            // x.style.color = "red";
-            // x.innerText = "heelo dom world"
-            // document.body.appendChild(x)
-            // console.log(x);
-          
-
-            // var arr = ["1","2", "3", "4"]
-            // for(var i = 0; i<=arr.length-1; i++)
-            // {
-            //     var x = document.createElement("li");
-            //     x.innerText = arr[i];
-            //     document.body.appendChild(x)
-            // }
-           
-
-            var students = [    {
+                   var students = [    {
                                 name:'jaya',
                                 gender:'female',
                                 place:'gachibowli',
@@ -66,23 +42,26 @@ table td{
                                 place:'hitech'
                                 },
                             ]
-                            const newTable = document.createElement("table");
-newTable.innerHTML = "<thead><th>Player</th><th>Score</th></thead>";
+                   var x = document.createElement("ul");
+                   for (var i=0; i<= students.length-1; i++)
+                   {
+                    var y = document.createElement("li");
+                    y.innerText = students[i].name;  
+                    y.innerText = students[i].name;  
+                    var a = document.createElement("ul");
+                    var z = document.createElement("li");
+                    var f = document.createElement("li");
+                    z.innerText = students[i].gender;  
+                    f.innerText = students[i].place;  
+                    a.appendChild(z);
+                    a.appendChild(f);
+                    y.appendChild(a);
+                    x.appendChild(y);   
 
-for(player of students){
-    const newRow = document.createElement("tr");
-    const tdPlayer = document.createElement("td");
-    const tdScore = document.createElement("td");
-    tdPlayer.textContent = player.name;
-    tdScore.textContent = player.gender;    
-    newRow.appendChild(tdPlayer);
-    newRow.appendChild(tdScore);
-    newTable.appendChild(newRow);
-}
+                   }
 
-const target = document.getElementById('target');
-target.appendChild(newTable);
-
+                var target = document.getElementById("target");
+                target.appendChild(x);
         </script>
     </body>
 </html>
