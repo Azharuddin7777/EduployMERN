@@ -15,10 +15,20 @@
       function Counter(){
 
         var [todos,settodos] = React.useState(['cooldrinks','moksha bus fee','manu shoes','memory card','connector']);
-        
+
+        const handleClick = (e) => {
+                e.preventDefault();
+               console.log('The link was clicked.');
+                  }
+                  function addTodo(){
+          var newtodo = document.getElementById('newtodo').value;
+          settodos([...todos,newtodo])
+        }
         return (
           <div>
             <h1>Todo - list</h1>
+            <input type="text" id='newtodo'/>
+            <button onClick={addTodo}>Add Task</button>
              <ul>
               {
                 todos.map(function(t){
