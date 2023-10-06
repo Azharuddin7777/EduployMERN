@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="d5"></div>
     <script type="text/babel">
-      
-      function Counter(){
+      function Counter() {
+        var [todos, settodos] = React.useState([
+          "cooldrinks",
+          "moksha bus fee",
+          "manu shoes",
+          "memory card",
+          "connector",
+        ]);
 
-        var [todos,settodos] = React.useState(['cooldrinks','moksha bus fee','manu shoes','memory card','connector']);
-
-        const handleClick = (e) => {
-                e.preventDefault();
-               console.log('The link was clicked.');
-                  }
-                  function addTodo(){
-          var newtodo = document.getElementById('newtodo').value;
-          settodos([...todos,newtodo])
+        function addTodo() {
+          var newtodo = document.getElementById("newtodo").value;
+          settodos([...todos, newtodo]);
         }
         return (
           <div>
             <h1>Todo - list</h1>
-            <input type="text" id='newtodo'/>
+            <input type="text" id="newtodo" />
             <button onClick={addTodo}>Add Task</button>
-             <ul>
-              {
-                todos.map(function(t){
-
-                  return <li>{t}</li>
-
-                })
-              }
-              </ul>
+            <ul>
+              {todos.map(function (t) {
+                return <li>{t}</li>;
+              })}
+            </ul>
           </div>
-        )
+        );
       }
-      ReactDOM.render(<Counter></Counter>,document.getElementById('d5'))
+      ReactDOM.render(<Counter></Counter>, document.getElementById("d5"));
     </script>
   </body>
 </html>

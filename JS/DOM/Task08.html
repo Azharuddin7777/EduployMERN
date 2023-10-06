@@ -67,9 +67,13 @@
 
                    for (var i=0; i<= people.length-1; i++)
                    {
-                    var b = document.createElement("th");
-                    b.innerHTML = "Names Lists"
-                    b.appendChild(a);
+                    // var b = document.createElement("th");
+                    // b.innerHTML = "Names Lists"
+                    // b.appendChild(a);
+                    console.log(people[i].firstname)
+                    var c = document.createElement("td");
+                    c.innerText = people[i].firstname
+                    c.appendChild(a);
                    }
 
                 var target = document.getElementById("target");

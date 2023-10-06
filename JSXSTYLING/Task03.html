@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1">
+    </div>
+    <script type="text/babel">
+        var ar = [35,87,66,54,34];
+        var dx = <ul style={{display : "flex"}}>
+                    {
+                        ar.map((e) => {
+                            return <div style={{width: "100px", border : "2px solid" , padding : "10px", margin : "10px"}}>{e}</div>
+                        })
+                    }
+                 </ul>
+        ReactDOM.render(dx, document.getElementById("d1"));
+       
+    </script>
+</body>
+</html>
