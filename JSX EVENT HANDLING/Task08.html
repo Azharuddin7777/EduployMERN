@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="dx"></div>
+    <script type="text/babel">
+      function abc(e) {
+        console.log(e.target.innerText);
+      }
+      var jh1 = (
+        <h1 id="my-div"
+          onClick={abc}
+        >
+          Click here to see alert
+        </h1>
+      );
+      ReactDOM.render(jh1, document.getElementById("dx"));
+    </script>
+  </body>
+</html>

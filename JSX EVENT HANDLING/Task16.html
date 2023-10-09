@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="dx"></div>
+    <script type="text/babel">
+      function abc()
+      {
+        var a = +document.getElementById("one").value
+        var b = +document.getElementById("two").value
+        var c = a+b;
+        document.getElementById("dd").innerHTML = c;
+      }
+        
+      var jh1 = <div>
+                  <input id="one" type="text" />
+                  <input id="two" type="text" />
+                  <button onClick={abc}>Add</button>
+                  <h1 id="dd"></h1>
+                </div>
+      ReactDOM.render(jh1, document.getElementById("dx"));
+    </script>
+  </body>
+</html>

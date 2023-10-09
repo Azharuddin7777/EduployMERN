@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dx"></div>
+        <script type="text/babel">
+            function abd (event) {
+                console.log(event.key)
+            }
+
+            // var jx = <button onClick={(e)=>{console.log(e)}}>click here to alert</button>
+            var jx = <input type="text" onKeyUp={(e) => {abd(e)}} />
+            ReactDOM.render(jx, document.getElementById("dx"))
+                 
+        </script>
+    </body>
+</html>
