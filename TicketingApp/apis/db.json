@@ -1,0 +1,41 @@
+{
+    "users" : [
+            {
+                "username" : "azhar",
+                "password": "123",
+                "role": "manager",
+                "id" : 1
+            },
+            {
+                "username" : "sindhu",
+                "password": "123",
+                "role": "employee",
+                "id" : 2
+            },
+            {
+                "username" : "rohith",
+                "password": "123",
+                "role": "employee",
+                "id" : 3
+            },
+            {
+                "username" : "alisha",
+                "password": "123",
+                "role": "employee",
+                "id" : 4
+            },
+            {
+                "username" : "vaseem",
+                "password": "123",
+                "role": "customer",
+                "id" : 5
+            }
+    ],
+    "posts": [
+      { "id": 1, "title": "js", "author": "typicode" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }
