@@ -1,14 +1,31 @@
 import React from 'react'
 import {useFormik} from 'formik'
+import { useAuthenticateQuery, useLazyAuthenticateQuery } from '../../services/userapi'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
+
+    var navigate = useNavigate();
+
+    var [loginFn] = useLazyAuthenticateQuery()
    var loginForm = useFormik({
     initialValues:{
         username : "",
         password : ""
     },
     onSubmit:(values)=>{
-        alert(JSON.stringify(values))
+        console.log(values)
+        loginFn(values).then((res)=>{
+            window.localStorage.setItem("user", JSON.stringify(res.data));
+           if(res.data.length === 0)
+           {
+            alert("check your deatils")
+           }
+           else
+           {
+            navigate("/dashboard");
+           }
+        })
     }
 
    })

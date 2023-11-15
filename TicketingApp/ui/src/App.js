@@ -1,11 +1,11 @@
-import './App.css';
-import Login from './features/user/Login'
+import { Outlet } from 'react-router-dom';
+import Login from './features/user/Login';
 
 function App() {
   return (
     <div>
      <h1>Ticketing App</h1>
-     <Login></Login>
+     <Outlet></Outlet>
     </div>
   );
 }
