@@ -1,41 +1,109 @@
 {
-    "users" : [
-            {
-                "username" : "azhar",
-                "password": "123",
-                "role": "manager",
-                "id" : 1
-            },
-            {
-                "username" : "sindhu",
-                "password": "123",
-                "role": "employee",
-                "id" : 2
-            },
-            {
-                "username" : "rohith",
-                "password": "123",
-                "role": "employee",
-                "id" : 3
-            },
-            {
-                "username" : "alisha",
-                "password": "123",
-                "role": "employee",
-                "id" : 4
-            },
-            {
-                "username" : "vaseem",
-                "password": "123",
-                "role": "customer",
-                "id" : 5
-            }
-    ],
-    "posts": [
-      { "id": 1, "title": "js", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+  "users": [
+    {
+      "username": "azhar",
+      "password": "123",
+      "role": "manager",
+      "id": 1
+    },
+    {
+      "username": "sindhu",
+      "password": "123",
+      "role": "employee",
+      "id": 2
+    },
+    {
+      "username": "rohith",
+      "password": "123",
+      "role": "employee",
+      "id": 3
+    },
+    {
+      "username": "alisha",
+      "password": "123",
+      "role": "employee",
+      "id": 4
+    },
+    {
+      "username": "vaseem",
+      "password": "123",
+      "role": "customer",
+      "id": 5
+    }
+  ],
+  "tickets": [
+    {
+      "issue": "ddgfdgfd",
+      "productName": "gfdgfdg",
+      "image": "",
+      "date": 1700100569448,
+      "customerId": 5,
+      "id": "iiv7wAn"
+    },
+    {
+      "issue": "ddgfdgfd",
+      "productName": "gfdgfdg",
+      "image": "",
+      "date": 1700100569448,
+      "customerId": 5,
+      "id": "fuf6FoB"
+    },
+    {
+      "issue": "ddgfdgfd",
+      "productName": "gfdgfdg",
+      "image": "",
+      "date": 1700100569448,
+      "customerId": 5,
+      "id": "VIDm6mh"
+    },
+    {
+      "issue": "asdsadas",
+      "productName": "dasdsada",
+      "image": "",
+      "date": 1700100769421,
+      "customerId": 5,
+      "id": "OgFd4Ly"
+    },
+    {
+      "issue": "dsfdsf",
+      "productName": "dsfdsf",
+      "image": "",
+      "date": 1700101051688,
+      "customerId": 5,
+      "id": "Vfiy7LA"
+    },
+    {
+      "issue": "dsfdsf",
+      "productName": "dsfdsf",
+      "image": "",
+      "date": 1700101093901,
+      "customerId": 5,
+      "id": "W9l7pqW"
+    },
+    {
+      "issue": "aaa",
+      "productName": "aaaaaa",
+      "image": "",
+      "date": 1700101591770,
+      "customerId": 5,
+      "id": "cmeWQzb"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "js",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}

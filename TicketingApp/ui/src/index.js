@@ -11,6 +11,8 @@ import { store } from './app/store'
 import { Provider } from 'react-redux'
 import Dashboard from './features/dashboard/Dashboard';
 import Login from './features/user/Login';
+import AddTicket from './features/dashboard/AddTicket';
+import ListTickets from './features/dashboard/ListTickets';
 
 
 const router = createBrowserRouter([
@@ -24,7 +26,21 @@ const router = createBrowserRouter([
       },
       {
         path : "/dashboard",
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        children : [
+          {
+            path : "/dashboard/addTicket",
+            element: <AddTicket></AddTicket>
+          },
+          {
+            path : "/dashboard",
+            element: <ListTickets></ListTickets>
+          },
+          {
+            path : "/dashboard/listTickets",
+            element: <ListTickets></ListTickets>
+          }
+        ]
       }
   ]
   },

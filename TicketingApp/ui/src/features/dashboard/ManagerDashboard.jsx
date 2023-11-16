@@ -2,7 +2,9 @@ import React from 'react'
 
 function ManagerDashboard() {
   return (
-    <div>ManagerDashboard</div>
+    <div>
+      <h1>ManagerDashboard</h1>
+    </div>
   )
 }
 
