@@ -2,9 +2,11 @@ import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { userApi } from '../services/userapi'
 import { ticketApi } from '../services/ticketapi'
-
+import loginReducer from '../features/user/loginSlice'
 export const store = configureStore({
   reducer: {
+
+    loginReducer: loginReducer,
     // Add the generated reducer as a specific top-level slice
     [userApi.reducerPath]: userApi.reducer,
     [ticketApi.reducerPath]: ticketApi.reducer,
