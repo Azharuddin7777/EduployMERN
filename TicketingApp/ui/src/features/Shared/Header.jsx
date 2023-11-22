@@ -1,28 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { setLoggedIn } from "../user/loginSlice";
 
 function Header() {
 
-var [isLoggedIn, setLoggedIn] = useState(false);
+// useSelector(state=>console.log("mmmmmmm",state))
+var isLoggedIn = useSelector(state=>state.loginReducer.isLoggedIn)
 var navigate = useNavigate();
-
-
-useEffect(()=>{
-    if (window.localStorage.getItem('user')) {
-        setLoggedIn(true)
-    }
-    else
-    {
-        setLoggedIn(false);
-        navigate('/login')
-    }
-},[])
+var dispatch = useDispatch()
 
 function logout(){
-    window.localStorage.removeItem('user');
-    setLoggedIn(false)
-    navigate('/login')
+  dispatch(setLoggedIn(false));
+  navigate("/login")
 }
+
 
   return (
     <div>
@@ -33,21 +25,12 @@ function logout(){
           </a>
 
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-
-
-                {isLoggedIn && (<button onClick={()=>{
-                    logout()
-                }}>
-                Logout
-              </button>) }
-              {!isLoggedIn && (<button class="nav-link" href="#">
-                LogIn
-              </button>) }
-            
-              {/* <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a> */}
-            </div>
+           {
+            isLoggedIn && <button onClick={()=>{logout()}}>Logout</button>
+           }
+           {
+            !isLoggedIn && <button>Login</button>
+           }
           </div>
         </div>
       </nav>

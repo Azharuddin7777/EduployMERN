@@ -1,8 +1,13 @@
-import React from 'react'
-import { useListTicketsQuery } from '../../services/ticketapi'
+import React, { useEffect } from 'react'
+import { useLazyListTicketsQuery, useListTicketsQuery } from '../../services/ticketapi'
 
 function ListTickets() {
    var {isLoading, data} = useListTicketsQuery();
+   var [getListTicketsFn] = useLazyListTicketsQuery();
+
+   useEffect(()=>{
+    getListTicketsFn();
+   },[])
    
   return (
     <div>

@@ -17,8 +17,8 @@ function AddTicket() {
       onSubmit: (values)=>{
         addTktFn(values)
         .then((res)=>{
-          alert(JSON.stringify(res))
           navigate("/dashboard/listTickets")
+          alert(JSON.stringify(res));
         })
         .catch((err)=>{
           alert(JSON.stringify(err))

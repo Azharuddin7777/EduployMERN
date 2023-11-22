@@ -18,10 +18,15 @@ export const ticketApi = createApi({
         query:()=>{
             return `/`
         }
+    }),
+    listTicketsByCustomerID: builder.query({
+      query:(cid)=>{
+        return `?customerid=${cid}`
+    }
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useAddTicketMutation, useListTicketsQuery } = ticketApi
+export const { useAddTicketMutation, useListTicketsQuery, useLazyListTicketsQuery} = ticketApi

@@ -3,12 +3,12 @@ import {useFormik} from 'formik'
 import { useAuthenticateQuery, useLazyAuthenticateQuery } from '../../services/userapi'
 import { useNavigate } from 'react-router-dom';
 import { setLoggedIn } from './loginSlice';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Login() {
     useSelector(state=>{console.log(state.loginReducer.isLoggedIn)});
     var navigate = useNavigate();
-
+    var dispatch = useDispatch()
     var [loginFn] = useLazyAuthenticateQuery()
    var loginForm = useFormik({
     initialValues:{
@@ -25,7 +25,7 @@ function Login() {
            }
            else
            {
-            setLoggedIn(true)
+            dispatch(setLoggedIn(true));
             navigate("/dashboard");
            }
         })
