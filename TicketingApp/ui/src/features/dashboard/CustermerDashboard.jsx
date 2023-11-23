@@ -1,22 +1,17 @@
 import React from 'react'
 import { Outlet, useNavigate, Link } from 'react-router-dom'
-import CustomerTicketsList from './CustomerTicketsList';
 
 function CustermerDashboard() {
   var navigate = useNavigate();
-
   return (
     <div>
-      <h1>Custormer Dashboard</h1>
-      <Link to="listTickets">All Tickets</Link>
-       &nbsp;	&nbsp;	&nbsp;
-      <button onClick={()=>{
-        navigate("addTicket")
-      }}>Raise Ticket</button>
-      {/* <CustomerTicketsList></CustomerTicketsList> */}
-      <Outlet></Outlet>
+        <h1>CustomerDashboard</h1>
+        <Link to="listTickets">List of Tickets</Link>
+        <button onClick={()=>{navigate("addTicket")}}>Raise Ticket</button>
+        <Outlet></Outlet>
     </div>
   )
 }
+
 
 export default CustermerDashboard

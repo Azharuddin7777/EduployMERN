@@ -1,48 +1,41 @@
 import React from 'react'
-import {useFormik} from 'formik'
+import { useFormik } from 'formik'
+import { useNavigate } from 'react-router-dom'
 import { useAuthenticateQuery, useLazyAuthenticateQuery } from '../../services/userapi'
-import { useNavigate } from 'react-router-dom';
-import { setLoggedIn } from './loginSlice';
-import { useDispatch, useSelector } from 'react-redux';
-
+import { setLoggedIn } from './loginSlice'
+import { useDispatch } from 'react-redux'
 function Login() {
-    useSelector(state=>{console.log(state.loginReducer.isLoggedIn)});
+    var [loginFn]=useLazyAuthenticateQuery()
     var navigate = useNavigate();
     var dispatch = useDispatch()
-    var [loginFn] = useLazyAuthenticateQuery()
-   var loginForm = useFormik({
-    initialValues:{
-        username : "",
-        password : ""
-    },
-    onSubmit:(values)=>{
-        console.log(values)
-        loginFn(values).then((res)=>{
-            window.localStorage.setItem("user", JSON.stringify(res.data));
-           if(res.data.length === 0)
-           {
-            alert("check your deatils")
-           }
-           else
-           {
-            dispatch(setLoggedIn(true));
-            navigate("/dashboard");
-           }
-        })
-    }
-
-   })
-
+    var loginForm = useFormik({
+        initialValues:{
+            username:"",
+            password:''
+        },
+        onSubmit:(values)=>{
+            console.log(values)
+            loginFn(values).then((res)=>{
+                window.localStorage.setItem("user",JSON.stringify(res.data))
+                if(res.data.length===0){
+                    alert("Check your details")
+                }
+                else{
+                    dispatch(setLoggedIn(true))
+                    navigate("/dashboard")
+                }
+            })
+        }
+    })
   return (
     <div>
         <h1>Login</h1>
         <form onSubmit={loginForm.handleSubmit}>
-           username :  <input type="text" name="username" onChange={loginForm.handleChange} />
+            User Name: <input type="text" name="username" onChange={loginForm.handleChange}/>
             <br />
-           password : <input type="text" name="password" onChange={loginForm.handleChange} />
+            Password: <input type="text" name="password" onChange={loginForm.handleChange}/>
             <br />
-            <button>login</button>
-
+            <button>Login</button>
         </form>
     </div>
   )

@@ -9,24 +9,40 @@ export const ticketApi = createApi({
     addTicket: builder.mutation({
       query: (ticket) =>{
         return {
-            method : "POST",
-            body: ticket
+            method:"POST",
+            body:ticket
         }
-      },
+      } ,
     }),
-    listTickets: builder.query({
+    updateTicket: builder.mutation({
+      query: (ticket) =>{
+        return {
+            url:`/${ticket.id}`,
+            method:"PUT",
+            body:ticket
+        }
+      } ,
+    }),
+    listTickets:builder.query({
         query:()=>{
             return `/`
         }
     }),
-    listTicketsByCustomerID: builder.query({
+    listTicketsByCustomerId:builder.query({
       query:(cid)=>{
-        return `?customerid=${cid}`
-    }
+        return `?customerId=${cid}`
+      }
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useAddTicketMutation, useListTicketsQuery, useLazyListTicketsQuery} = ticketApi
+export const { 
+  useAddTicketMutation,
+  useListTicketsQuery,
+  useLazyListTicketsQuery,
+  useListTicketsByCustomerIdQuery,
+  useLazyListTicketsByCustomerIdQuery,
+  useUpdateTicketMutation 
+} = ticketApi;

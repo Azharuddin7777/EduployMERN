@@ -7,11 +7,24 @@ export const userApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:4000/users' }),
   endpoints: (builder) => ({
     authenticate: builder.query({
-      query: (user) => `?username=${user.username}&password=${user.password}`,
+      query: (user) =>{
+        console.log("password",user)
+        return `?username=${user.username}&password=${user.password}`
+      } ,
     }),
+    getAllEmployees:builder.query({
+      query:()=>{
+        return `?role=employee`
+      }
+    })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useLazyAuthenticateQuery,useAuthenticateQuery } = userApi
+export const { 
+  useLazyAuthenticateQuery,
+  useAuthenticateQuery,
+  useGetAllEmployeesQuery,
+  useLazyGetAllEmployeesQuery
+} = userApi

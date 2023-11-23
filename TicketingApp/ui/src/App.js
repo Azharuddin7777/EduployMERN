@@ -7,7 +7,6 @@ function App() {
     <div>
       <Header></Header>
      <Outlet></Outlet>
-     added a line
     </div>
   );
 }

@@ -1,36 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
 import { setLoggedIn } from "../user/loginSlice";
 
 function Header() {
-
-// useSelector(state=>console.log("mmmmmmm",state))
-var isLoggedIn = useSelector(state=>state.loginReducer.isLoggedIn)
-var navigate = useNavigate();
-var dispatch = useDispatch()
-
-function logout(){
-  dispatch(setLoggedIn(false));
-  navigate("/login")
-}
-
-
+  useSelector(state=>console.log(state.loginReducer.isLoggedIn))
+  var isLoggedIn = useSelector(state=>state.loginReducer.isLoggedIn)
+  var navigate = useNavigate();
+  var dispatch = useDispatch();
+  function logout(){
+    dispatch(setLoggedIn(false));
+    navigate("/login")
+  }
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-primary">
+      <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            Ticketing App
+            Ticket APP
           </a>
-
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-           {
-            isLoggedIn && <button onClick={()=>{logout()}}>Logout</button>
-           }
-           {
-            !isLoggedIn && <button>Login</button>
-           }
+            {
+              isLoggedIn && <button onClick={()=>{logout()}}>Logout</button>
+            }
+            {
+              !isLoggedIn && <button>Login</button>
+            }
           </div>
         </div>
       </nav>
